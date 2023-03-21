@@ -10,6 +10,7 @@ defmodule ExHackers.Application do
     children = [
       # Starts a worker by calling: ExHackers.Worker.start_link(arg)
       # {ExHackers.Worker, arg}
+      {ExHackers.EchoServer, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

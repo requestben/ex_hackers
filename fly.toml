@@ -1,0 +1,33 @@
+# fly.toml file generated for long-grass-4246 on 2023-03-21T15:53:55-05:00
+
+app = "long-grass-4246"
+
+kill_signal = "SIGINT"
+kill_timeout = 5
+processes = []
+
+[build]
+  builder = "heroku/buildpacks:20"
+  buildpacks = ["https://cnb-shim.herokuapp.com/v1/hashnuke/elixir"]
+
+[env]
+  PORT = "5001"
+
+[experimental]
+  auto_rollback = true
+
+[[services]]
+  http_checks = []
+  internal_port = 5001
+  processes = ["app"]
+  protocol = "tcp"
+  script_checks = []
+
+  [services.concurrency]
+    hard_limit = 25
+    soft_limit = 20
+    type = "connections"
+
+  [[services.ports]]
+    port = 5001
+

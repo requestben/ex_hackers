@@ -1,21 +1,20 @@
-# ExHackers
+# ExHackers - My Attempt At Protohackers
 
-**TODO: Add description**
+Inspired by [Protohackers in Elixir][protohackers_in_elixir], I'm making an attempt at solveing the [Protohackers] network challenges, using Elixir.
 
-## Installation
+## Running Locally
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ex_hackers` to your list of dependencies in `mix.exs`:
+You can run this application locally by cloning the repository and running:
 
-```elixir
-def deps do
-  [
-    {:ex_hackers, "~> 0.1.0"}
-  ]
-end
+```shell
+mix deps.get
+mix run --no-halt
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/ex_hackers>.
+## Deploying
 
+I'm deploying this application on [Fly.io][fly], at least for the moment.
+
+[Protohackers]: https://protohackers.com
+[protohackers_in_elixir]: https://github.com/whatyouhide/protohackers_in_elixir
+[fly]: https://fly.io
